@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lisa Broadhead</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +13,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head> 
 <body>
-    <main>
-        <h1>Lisa <span>Broadhead</span></h1>
-        <p>Into the Great Unkown!</p>
-        <nav>
-            <ul>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Resume</li>
-            </ul>
-        </nav>
+    <main style="background-image: url('img/banner1.jpeg');">
+        <div class="txt-wrp">
+            <h1>Lisa <span>Broadhead</span></h1>
+            <p>Into the Great Unkown!</p>
+        </div>
+        <ul class="nav">
+            <li class="about">About</li>
+            <li class="skills">Skills</li>
+            <li class="projects">Projects</li>
+            <li class="resume" onclick="addName('resume-popup')">Resume</li>
+        </ul>
+
         <ul class="social-links">
             <li><a href="" target="_blank"><i class="fab fa-github-square"></i></a></li>
             <li><a href="" target="_blank"><i class="fab fa-linkedin"></i></a></li>
@@ -30,6 +32,45 @@
         </ul>
     </main>
 
+    <div class="resume-popup">
+        <i onclick="removeClass('resume-popup')" class="fas fa-times"></i>
+        <h2>Lisa's Resume</h2>
+        <p>Would you like to:</p>
+        <button class="button download" href="pdf/Resume.pdf" download>Download</button> <span>or</span> 
+        <button class="button email">Email</button> 
+        <span>or</span> 
+        <button class="button view">View</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
+<!-- Overall -->
+<!-- 1. make it you - add weird hidden elements, and hovers
+2. keep it ot one page
+3. add some really cool html canvas element to the Project
+4. have a random box pop up while thye're on it and have the site just go bokners (like they think I'll all cool and normal and SIKE NOT! )
+5. button animation -->
+
+<!-- Skills -->
+<!-- 1. Make bars that fill up with competacy in that language - have them dripping from the ceiling (maybe make drops fall off of them?)
+2. add educatoin in this section? -->
+
+<!-- Social -->
+<!-- 1. when you hover over one the others rotate around that item -->
+
+<!-- RESUME -->
+<!-- 1. create a pop up that show asks to download or email yourself -->
+
+<!-- About -->
+<!-- 1. make pictures about you
+2. Just talk like you: funny, corky,  -->
+
+<!-- Projects -->
+<!-- 1. still not sure what to put here -->
+
+<!-- Ideas: -->
+<!-- 1. Hover over th covers and have things happen 
+2. Change the color ar some point - gettings the users input?
+3. -->
