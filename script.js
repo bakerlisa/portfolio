@@ -1,38 +1,35 @@
-// sets the background to revolve
-var bckImg= [
-    "banner1.jpeg",
-    "banner2.jpeg",
-    "banner3.jpeg"
-];
-var count = 0;
-var bckImgLeng = bckImg.length;
-
-setInterval(() => {
-    console.log("Hello world");
-    document.querySelector("main").style.backgroundImage = `img/${bckImg[count]}`;
-    
-    if(count <= bckImgLeng){
-        count = 0;
-    }else{
-        count++;
-    }
-}, 5000);
-
-// Resume
-
 //Toggle Functions: ON
-function addName(name){
+function toggleClass(event,name){
+    event.stopPropagation;
+    console.log(event.target);
     let hasClass = document.querySelector(`.${name}`);
 
     if(hasClass){
         hasClass.classList.add('active');
-    }
-}
-//OFF
-function removeClass(name){
-   let hasClass = document.querySelector(`.${name}`);
-
-    if(hasClass){
+    }else{
         hasClass.classList.remove('active'); 
     }
+}
+
+setTimeout(function(){
+    var allEls = document.querySelectorAll('.el');
+    for(var e=0;e<allEls.length;e++){
+        var el1 = allEls[e].getAttribute('data-el1');
+        var el2 = allEls[e].getAttribute('data-el2');
+        var elFull = el1+"@"+el2+".com";
+        allEls[e].setAttribute('href', "mailto:"+elFull);
+    }
+}, 3000);
+
+
+function tab(name){
+    document.querySelector("main").classList = "";
+    if(name == 'about'){
+        document.querySelector("main").style.backgroundImage = "url('img/banner1.jpeg')";
+    }else if(name == 'skills'){
+        document.querySelector("main").style.backgroundImage = "url('img/cave02.jpeg')";
+    }else if(name == 'projects'){
+        document.querySelector("main").style.backgroundImage = "url('img/project01.jpg')";
+    }
+    document.querySelector("main").classList.add(name);
 }
