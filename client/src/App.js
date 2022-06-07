@@ -8,7 +8,7 @@ function App() {
   const [data,setData] = useState([{}])
 
   useEffect(() => {
-    fetch("/tags/1").then(
+    fetch("/tags").then(
       res => res.json()
     ).then(
       data => {

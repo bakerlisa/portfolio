@@ -13,3 +13,8 @@ def tags(tag_id):
     }
     tag_info = Tag.get_all_blogs_by_tag_id(data)
     return {"tag_info": tag_info}
+
+@app.route('/tags')
+def all_tags():
+    tags = Tag.all_tags()
+    return {"tags": tags}
