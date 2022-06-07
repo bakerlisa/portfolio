@@ -1,4 +1,5 @@
 import './App.css';
+import axios from 'axios'
 import React, {useState, useEffect} from 'react'
 
 import Index from './components/Index';
@@ -8,14 +9,10 @@ function App() {
   const [data,setData] = useState([{}])
 
   useEffect(() => {
-    fetch("/tags").then(
-      res => res.json()
-    ).then(
-      data => {
+    axios.get('http://localhost:5001/tags')
+      .then(response => {
         setData(data)
-        console.log(data)
-      }
-    )
+      })
   }, [])
 
   return (
