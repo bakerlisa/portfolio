@@ -9,15 +9,15 @@ function App() {
   const [data,setData] = useState([{}])
 
   useEffect(() => {
-    axios.get('http://localhost:5001/tags')
+    axios.get('/tags')
       .then(response => {
-        setData(data)
+        setData(response.data)
       })
   }, [])
 
   return (
     <div>
-      <h1>Hllo world</h1>
+      <h1>React + Python here we come!</h1>
     </div>
   );
 }
