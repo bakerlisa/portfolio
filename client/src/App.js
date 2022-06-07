@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import React, {useState, useEffect} from 'react'
 
 import Index from './components/Index';
 import Blog from './components/Blog';
 
 function App() {
+  const [data,setData] = useState([{}])
+
+  useEffect(() => {
+    fetch("/members").then(
+      res => res.json()
+    ).then(
+      data => {
+        setData(data)
+        console.log(data)
+      }
+    )
+  }, [])
+
   return (
-    <BrowserRouter >
-
-      <Switch>
-        <Route exact path="/">
-          <Index />
-        </Route>
-
-        <Route exact path="/blog">
-          <Blog />
-        </Route>
-      </Switch>
-
-    </BrowserRouter>
+    <div>
+      <h1>Hllo world</h1>
+    </div>
   );
 }
 

@@ -36,3 +36,7 @@ const Blog = (props) => {
 }
 
 export default Blog;
+
+// Document what you've learned
+// Document your interviews : what you did wrong and what you're going to work on next
+// What you do to prepare 
