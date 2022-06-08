@@ -1,38 +1,17 @@
-.App {
-  text-align: center;
-}
+// COLORS
+$white:#fff;
+$cream:#F2E0D0;
+$baby_blue:#B8C9F2;
+$lt-blue:#00d4ff;
+$dk-blue:#090979;
+$purple:#4A0385;
+$mint:#B8F2DC;
+$pink:#F9D2CA; 
+$blush:#E3AEAC;
+$lips:#AD837B;
+$salmon:#FB9480;
+$yellow:#FDDDA5;
+$black: #000;
+$off_black:#020024;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+$title:'Roboto Condensed', sans-serif;
