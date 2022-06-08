@@ -1,15 +1,18 @@
 import React from 'react'
-import StyleBanner from '../css/StyleBanner.js';
+
+
+
 
 const Banner = (props) => {
     return(
         
-        <StyleBanner img={props.img}>
+        <div className="banner" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/${props.img})`}} >
             <div className="txt-wrp">
                 <h1 className="title">{props.title}</h1>
                 <h4>{props.subtitle}</h4>
             </div>
-        </StyleBanner>
+            </div>
+
     )
 }
 
