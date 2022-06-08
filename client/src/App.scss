@@ -18,3 +18,9 @@ $off_black:#020024;
 
 // FONTS
 $title:'Roboto Condensed', sans-serif;
+
+object{    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: scroll;}

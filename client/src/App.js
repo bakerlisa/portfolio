@@ -7,6 +7,7 @@ import Index from '../../client/src/components/Index';
 import Blog from '../../client/src/components/Blog';
 import AddBlog from '../../client/src/components/AddBlog';
 import EditBlog from '../../client/src/components/EditBlog';
+import Resume from '../../client/src/components/Resume';
 
 function App() {
   const [data,setData] = useState([{}])
@@ -24,6 +25,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Index />
+          </Route>
+        </Switch>
+
+        <Switch>
+          <Route exact path="/resume">
+            <Resume />
           </Route>
         </Switch>
 
