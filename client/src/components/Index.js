@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link} from 'react-router-dom';
-import Banner from '../views/Banner';
+import bkg1 from '../img/space7.jpeg'
+import styled from '../css/Index.module.scss'
 
 
 const Index = (proprs) =>{
     return(
-        <>
-            <Banner img="space7.jpeg" title="Lisa Broadhead" subtitle="Into the Great Unkown!" />
+        <div className={styled.wrp}  style={{backgroundImage: `url(${bkg1})`}}>
+            <div className={styled.txtWrp}>
+                <h1 className="title">Lisa Broadhead</h1>
+                <h4>Into the Great Unkown!</h4>
+            </div>
             <main className="about">
                 <ul className="nav">
                     <li className="about">About</li>
@@ -24,7 +28,7 @@ const Index = (proprs) =>{
                 </ul>
                 
             </main>
-        </>
+        </div>
     )
 } 
 
