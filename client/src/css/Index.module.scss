@@ -7,9 +7,12 @@
     } 
     &:after{content:''; height: 100%;width: 100%; position: absolute; top: 0;left: 0; background-color: rgba(0,0,0,.4);}
 }
+
 .txtWrp{z-index: 100; position: absolute; top: 50%; transform: translateY(-50%); left: 0;right: 0;margin: 0 auto; text-align: center;
     h1{background: -webkit-radial-gradient($white, $black); line-height: 160px; font-size:13.5vw; opacity: .5;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;}
-    h4{font-size: 50px; color: $white;}
+    h4{font-size: 50px; color: $gray;}
 }
+
+.social-links{position: relative;}
