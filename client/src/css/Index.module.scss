@@ -1,11 +1,7 @@
 @import "./variables";
 
 @mixin transition(){
-    -webkit-transition: $x;
-    -moz-transition: $x;
-    -ms-transition: $x;
-    -o-transition: $x;
-    transition: $x;
+    transition: all .25s ease-in;
 }
 
 .wrp{background-size: cover; background-repeat: no-repeat; height: 100vh; position: relative;
@@ -34,8 +30,8 @@
 
 .socialLinks{position: absolute; bottom:25px; right: 25px; z-index: 100; color: white; display: flex; align-items: start;justify-content: start;flex-wrap: wrap;
     li{padding: 0 25px; font-size: 50px; list-style-type: none;
-        a{overflow: hidden; display: block; transform: rotate(0deg); }
-        &:hover a{cursor: pointer; color:$white; transition: all .25s ease-in; transform: rotate(360deg);}
+        a{overflow: hidden; display: block; transform: rotate(0deg); @include transition;}
+        &:hover a{cursor: pointer; color:$white; transform: rotate(360deg); @include transition;}
         &:hover svg{color:$white}
     }
 }

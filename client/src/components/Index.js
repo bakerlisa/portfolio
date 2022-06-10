@@ -1,24 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link} from 'react-router-dom';
 import bkg1 from '../img/space7.jpeg'
 import styled from '../css/Index.module.scss'
-// import styled from '../css/Index.module.css'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faFacebookF,faGithub,faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Index = (proprs) =>{
-    const emailHandler = () => {
+    const [eml,setEmail] = useState('')
+    
+
+    useEffect(() => {
         // create the email link
-        // for(var e=0;e<allEls.length;e++){
-        //     var el1 = allEls[e].getAttribute('data-el1');
-        //     var el2 = allEls[e].getAttribute('data-el2');
-        //     var elFull = el1+"@"+el2+".com";
-        //     allEls[e].setAttribute('href', "mailto:"+elFull);
-        // }
-        console.log("hello")
-    }
+        setEmail("mailto:lb.broadhead@gmail.com");
+    },[])
 
     return(
         <div className={styled.wrp}  style={{backgroundImage: `url(${bkg1})`}}>
@@ -38,7 +35,7 @@ const Index = (proprs) =>{
                 <ul className={styled.socialLinks}>
                     <li><a href="https://github.com/lisabroadhead" target="_blank"><FontAwesomeIcon icon={faGithub} /></a></li>
                     <li><a href="https://www.linkedin.com/in/lisa-broadhead/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-                    <li><a onClick={emailHandler} data-el1="lb.bradohead" data-el2="gmail"><FontAwesomeIcon icon={faEnvelope} /></a></li>
+                    <li><a href={eml}><FontAwesomeIcon icon={faEnvelope} /></a></li>
                 </ul>
                 
             </main>
@@ -49,6 +46,4 @@ const Index = (proprs) =>{
 export default Index;
 
 
-// email
-// mixin trainsistion
 // animations for home pagew
