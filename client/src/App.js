@@ -29,6 +29,24 @@ function App() {
         </Switch>
 
         <Switch>
+          <Route exact path="/about">
+
+          </Route>
+        </Switch>
+
+        <Switch>
+          <Route exact path="/skills">
+
+          </Route>
+        </Switch>
+
+        <Switch>
+          <Route exact path="/projects">
+
+          </Route>
+        </Switch>
+
+        <Switch>
           <Route exact path="/resume">
             <Resume />
           </Route>

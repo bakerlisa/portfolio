@@ -6,7 +6,7 @@
     -ms-transition: $x;
     -o-transition: $x;
     transition: $x;
-    }
+}
 
 .wrp{background-size: cover; background-repeat: no-repeat; height: 100vh; position: relative;
     &:before{content:''; height: 100%;width: 100%; position: absolute; top: 0;left: 0; 
@@ -33,15 +33,25 @@
 }
 
 .socialLinks{position: absolute; bottom:25px; right: 25px; z-index: 100; color: white; display: flex; align-items: start;justify-content: start;flex-wrap: wrap;
-    li{padding: 0 25px; font-size: 50px; list-style-type: none;}
-    li:nth-child(1) a{color:$blush; transition: all .25s ease-in;}
-    li:nth-child(2) a{color:$mint; transition: all .25s ease-in;}
-    li:nth-child(3) a{color:$baby_blue; transition: all .25s ease-in;}
-    li:hover a{color:$white; transition: all .25s ease-in;}
-    // svg{color:$white}
+    li{padding: 0 25px; font-size: 50px; list-style-type: none;
+        a{overflow: hidden; display: block; transform: rotate(0deg); }
+        &:hover a{cursor: pointer; color:$white; transition: all .25s ease-in; transform: rotate(360deg);}
+        &:hover svg{color:$white}
+    }
 }
 
-@keyframes pulse {
-    0%{}
-    100%{}
+
+
+li:nth-child(1) a svg{color:$blush; display: block; transform-origin:center; transform:scale(.7); opacity: .7;
+    animation: 10s ease-in 0s infinite pulsed;
+
+}
+li:nth-child(2) svg{color:$baby_blue; transform:scale(.7); animation: 10s ease-in 1.3s infinite pulsed;}
+li:nth-child(3) svg{color:$mint; transform:scale(.7); animation: 10s ease-in 2.8s infinite pulsed;}
+
+@keyframes pulsed{
+    0%{transform:scale(.7); opacity: .7;}
+    5%{transform:scale(1); opacity: 1;}
+    95%{transform:scale(1); opacity: 1;}
+    100%{transform:scale(.7); opacity: .7;}
 }
