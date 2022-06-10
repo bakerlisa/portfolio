@@ -1,23 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Link} from 'react-router-dom';
 import bkg1 from '../img/space7.jpeg'
 import styled from '../css/Index.module.scss'
 
-import {TweenMax} from gsap;
+import {TweenMax, Power3} from 'gsap';
 
 // fontawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faFacebookF,faGithub,faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faGasPump } from '@fortawesome/free-solid-svg-icons'
+import { faGithub,faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Index = (proprs) =>{
     const [eml,setEmail] = useState('')
-    
 
+    let logoItem = useRef(null)
+
+    
 
     useEffect(() => {
         // create the email link
         setEmail("mailto:lb.broadhead@gmail.com");
+        console.log(logoItem)
+
     },[])
 
     return(
