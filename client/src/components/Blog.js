@@ -5,10 +5,15 @@ import axios from 'axios';
 
 const Blog = (props) => {
     const [cates, setCates] = useState([])
-    
-    useEffect(() => {
-        
-    },[])
+
+    // useEffect(() => {
+    //     axios.post('http://localhost:8000/api/pirates/', {
+    //         firstName,
+    //         lastName
+    //     })
+    //         .then(res=>console.log(res))
+    //         .catch(err=>console.log(err))
+    // },[])
     return(
         <>
             <div class={styled.banner}>
