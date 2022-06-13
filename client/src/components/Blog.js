@@ -4,19 +4,18 @@ import styled from '../css/Blog.module.scss'
 import axios from 'axios';
 
 const Blog = (props) => {
-    const [cates, setCates] = useState([])
+    const [cates, setCates] = useState()
 
-    // useEffect(() => {
-    //     axios.post('http://localhost:8000/api/pirates/', {
-    //         firstName,
-    //         lastName
-    //     })
-    //         .then(res=>console.log(res))
-    //         .catch(err=>console.log(err))
-    // },[])
+    useEffect(() => {
+        axios.get('../flask_app/tags/1')
+        .then(response => {
+            setCates(response.data)
+        })
+    }, [cates])
+
     return(
         <>
-            <div class={styled.banner}>
+            <div className={styled.banner}>
                 <div className={styled.txtwrp}>
                     <h1>Blog</h1>
                     <p className={styled.subtitle}>"I am still learning." <span className={styled.author}>- Michelangelo</span></p>

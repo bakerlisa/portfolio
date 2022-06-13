@@ -15,6 +15,6 @@ def tags(tag_id):
     return {"tag_info": tag_info}
 
 @app.route('/tags')
-def all_tags():
+def get_all_tags():
     tags = Tag.all_tags()
     return {"tags": tags}
