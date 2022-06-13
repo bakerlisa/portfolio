@@ -7,6 +7,7 @@ import Index from '../../client/src/components/Index';
 import Blog from '../../client/src/components/Blog';
 import AddBlog from '../../client/src/components/AddBlog';
 import EditBlog from '../../client/src/components/EditBlog';
+import Footer from '../../client/src/views/Footer';
 import Resume from '../../client/src/components/Resume';
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
           </Route>
         </Switch>
 
+        <Footer />
       </BrowserRouter>
 
   );

@@ -1,32 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import lisa from '../img/lisa_broadhead.jpeg'
+import styled from '../css/Blog.module.scss'
+import axios from 'axios';
 
 const Blog = (props) => {
+    const [cates, setCates] = useState([])
+    
+    useEffect(() => {
+        
+    },[])
     return(
         <>
-            <div class="banner">
-            <h1>Blog</h1>
-            <p className="subtitle">"I am still learning." <span className='author'>- Michelangelo</span></p>
+            <div class={styled.banner}>
+                <div className={styled.txtwrp}>
+                    <h1>Blog</h1>
+                    <p className={styled.subtitle}>"I am still learning." <span className={styled.author}>- Michelangelo</span></p>
+                </div>
             </div>
             
-            <div className="container">
+            <div className={styled.container}>
                 <main>
                     <div className='mostRecten'>
                         {/* Most recent list of blog posts */}
                     </div>
                 </main>
 
-                <aside>
-                    <img src={lisa} alt="Lisa Broadhead - Software Engineer | Data Scientist Machine Learnering Engineer" />
-                    
-                    <p className="paragraph">I'm always learning and therfore always failing (it sucks, but everything has a price). I began this project as a way to keep track of my htoughts and notes. I use to use Google Docs, which worked great, but it wasn't visuale or interactive enought for me.</p>
-                    <div className='socialWrp'>
+                <aside className='flex'>
 
-                    </div>
+                        <div className={styled.imgWrp}> 
+                            <img src={lisa} alt="Lisa Broadhead - Software Engineer | Data Scientist Machine Learnering Engineer" />
+                        </div>
+                        <div className="txt">
+                            <h3>Author: <span>Lisa Broadhead</span></h3>
 
-                    <ul className='categories'>
-                        {/* Cageories from the database */}
-                    </ul>
+                        </div>
+
+                        <p className="paragraph">I'm always learning and therfore always failing (it sucks, but everything has a price). I began this project as a way to keep track of my htoughts and notes. I use to use Google Docs, which worked great, but it wasn't visuale or interactive enought for me.</p>
+                        <div className='socialWrp'>
+
+                        </div>
+
+                        <ul className='categories'>
+                            {/* Cageories from the database */}
+                        </ul>
+
                 </aside>
                 
             </div>

@@ -15,13 +15,9 @@ const Index = (proprs) =>{
 
     let logoItem = useRef(null)
 
-    
-
     useEffect(() => {
         // create the email link
         setEmail("mailto:lb.broadhead@gmail.com");
-        console.log(logoItem)
-
     },[])
 
     return(
