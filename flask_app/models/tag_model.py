@@ -21,6 +21,4 @@ class Tag:
     def all_tags(self):
         query = "SELECT * FROM tags"
         results = connectToMySQL('portfolio').query_db(query)
-        print("+++++++++++++++++")
-        print(results)
         return results

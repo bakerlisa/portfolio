@@ -4,14 +4,15 @@ import styled from '../css/Blog.module.scss'
 import axios from 'axios';
 
 const Blog = (props) => {
-    const [cates, setCates] = useState()
+    const [cats, setCats] = useState([])
 
     useEffect(() => {
-        axios.get('../flask_app/tags/1')
+        axios.get('http://localhost:5001/tags')
         .then(response => {
-            setCates(response.data)
+            setCats(response.data)
+            console.log(cats)
         })
-    }, [cates])
+    }, [])
 
     return(
         <>
@@ -45,6 +46,14 @@ const Blog = (props) => {
                         </div>
 
                         <ul className='categories'>
+                            <h3>Categories</h3>
+                            <ul>
+
+                                        {
+                                            cats.length > 0 ? "Yes" : "Not"
+                                        }
+
+                            </ul>
                             {/* Cageories from the database */}
                         </ul>
 

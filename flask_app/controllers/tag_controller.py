@@ -6,6 +6,7 @@ from flask import render_template,redirect,request,session,flash
 from flask_app.models.tag_model import Tag
 # ROUTES
 
+
 @app.route('/tags/<int:tag_id>')
 def tags(tag_id):
     data = {
