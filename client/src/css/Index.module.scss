@@ -15,19 +15,10 @@
 }
 
 .txtWrp{z-index: 100; position: absolute; top: 50%; transform: translateY(-50%); left: 0;right: 0;margin: 0 auto; text-align: center;
-    h1{background: -webkit-radial-gradient($yellow, $black); line-height: 13.5vw; font-size:13.5vw; opacity: .5;
+    h1{background: -webkit-radial-gradient($white, $black); line-height: 13.5vw; font-size:13.5vw; opacity: .5;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;}
     h4{font-size: 50px; color: $yellow;}
-}
-
-.nav{ position: relative; z-index: 100; color:$lav; padding:25px 0 0 25px; height: 100%;
-    li{list-style-type: none; font-size: 20px; padding-bottom: 10px; height: 20%;
-        &:hover{color:$white}
-    }
-    a{color: $lav; text-decoration: none;
-        &:hover{color:$white}
-    }
 }
 
 .socialLinks{position: absolute; bottom:25px; right: 25px; z-index: 100; color: white; display: flex; align-items: start;justify-content: start;flex-wrap: wrap;

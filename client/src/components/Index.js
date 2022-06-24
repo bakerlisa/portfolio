@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { Link} from 'react-router-dom';
 import bkg1 from '../img/space7.jpeg'
 import styled from '../css/Index.module.scss'
+
 
 import {TweenMax, Power3} from 'gsap';
 
@@ -9,6 +9,7 @@ import {TweenMax, Power3} from 'gsap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub,faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import Nav from '../views/Nav';
 
 const Index = (proprs) =>{
     const [eml,setEmail] = useState('')
@@ -27,14 +28,8 @@ const Index = (proprs) =>{
                 <h4>Lisa Broadhead</h4>
             </div>
             <main className={styled.about}>
-                <ul className={styled.nav}>
-                    <li className="about"><Link to="/about">About</Link></li>
-                    <li className="skills"><Link to="/skills">Skills</Link></li>
-                    <li className="projects"><Link to="/projects">Projects</Link></li>
-                    <li className="blog"><Link to="/blog">Blog</Link></li>
-                    <li><Link to="/resume">Resume</Link></li>
-                </ul>
-
+                <Nav />
+                
                 <ul className={styled.socialLinks}>
                     <li><a href="https://github.com/lisabroadhead" target="_blank"><FontAwesomeIcon icon={faGithub} /></a></li>
                     <li><a href="https://www.linkedin.com/in/lisa-broadhead/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a></li>

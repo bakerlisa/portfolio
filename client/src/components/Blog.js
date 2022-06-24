@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import lisa from '../img/lisa_broadhead.jpeg'
 import styled from '../css/Blog.module.scss'
 import axios from 'axios';
+import Nav from '../views/Nav';
 
 const Blog = (props) => {
     const [cats, setCats] = useState([])
@@ -16,6 +17,8 @@ const Blog = (props) => {
 
     return(
         <>
+            <Nav />
+            
             <div className={styled.banner}>
                 <div className={styled.txtwrp}>
                     <h1>Blog</h1>
