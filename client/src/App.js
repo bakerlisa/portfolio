@@ -58,10 +58,11 @@ function App() {
         <Switch>
           <Route exact path="/add-blog">
             <AddBlog />
+            <Footer />
           </Route>
         </Switch>
 
-        <Footer />
+        
       </BrowserRouter>
 
   );

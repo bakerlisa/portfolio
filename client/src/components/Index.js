@@ -23,10 +23,10 @@ const Index = (proprs) =>{
     return(
         <div className={styled.wrp}  style={{backgroundImage: `url(${bkg1})`}}>
             <div className={styled.txtWrp}>
-                <h1 className="title">Lisa Broadhead</h1>
-                <h4>Into the Great Unkown!</h4>
+                <h1 className="title">Web Developer</h1>
+                <h4>Lisa Broadhead</h4>
             </div>
-            <main className="about">
+            <main className={styled.about}>
                 <ul className={styled.nav}>
                     <li className="about"><Link to="/about">About</Link></li>
                     <li className="skills"><Link to="/skills">Skills</Link></li>

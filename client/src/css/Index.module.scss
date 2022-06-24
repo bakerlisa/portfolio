@@ -4,7 +4,9 @@
     transition: all .25s ease-in;
 }
 
+
 .wrp{background-size: cover; background-repeat: no-repeat; height: 100vh; position: relative;
+    main{height: 100vh; overflow: hidden;}
     &:before{content:''; height: 100%;width: 100%; position: absolute; top: 0;left: 0; 
         background: rgb(131,58,180);
         background: radial-gradient(circle, rgba(131,58,180,.4) 0%, rgba(253,29,29,.4) 40%, rgba(252,176,69,.4) 75%, rgba(0,0,0,.4) 100%);
@@ -13,14 +15,14 @@
 }
 
 .txtWrp{z-index: 100; position: absolute; top: 50%; transform: translateY(-50%); left: 0;right: 0;margin: 0 auto; text-align: center;
-    h1{background: -webkit-radial-gradient($yellow, $black); line-height: 160px; font-size:13.5vw; opacity: .5;
+    h1{background: -webkit-radial-gradient($yellow, $black); line-height: 13.5vw; font-size:13.5vw; opacity: .5;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;}
     h4{font-size: 50px; color: $yellow;}
 }
 
-.nav{ position: relative; z-index: 100; color:$lav; padding:25px 0 0 25px;
-    li{list-style-type: none; font-size: 20px; padding-bottom: 10px;
+.nav{ position: relative; z-index: 100; color:$lav; padding:25px 0 0 25px; height: 100%;
+    li{list-style-type: none; font-size: 20px; padding-bottom: 10px; height: 20%;
         &:hover{color:$white}
     }
     a{color: $lav; text-decoration: none;
@@ -36,8 +38,6 @@
     }
 }
 
-
-
 li:nth-child(1) a svg{color:$blush; display: block; transform-origin:center; transform:scale(.7); opacity: .7;
     animation: 10s ease-in 0s infinite pulsed;
 
@@ -50,4 +50,10 @@ li:nth-child(3) svg{color:$mint; transform:scale(.7); animation: 10s ease-in 2.8
     5%{transform:scale(1); opacity: 1;}
     95%{transform:scale(1); opacity: 1;}
     100%{transform:scale(.7); opacity: .7;}
+}
+
+
+@media all and (max-width:1000px){
+    .socialLinks li{font-size: 25px; padding:0 10px;}
+    .txtWrp h4{font-size: 25px;}
 }
