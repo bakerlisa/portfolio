@@ -6,10 +6,10 @@ main{width: $col_2_3;}
 aside{width: $col_1_3;}
 
 // BANNER
-.banner{background-image: url('../img/banner4.jpeg'); padding: 50px; position: relative; background-size: cover; background-position: center; color:$white; margin-bottom: 50px;
-    h1{padding-bottom: 15px;}
+.banner{background-image: url('../img/banner4.jpeg');  position: relative; background-size: cover; background-position: center; color:$white; margin-bottom: 50px;
+    h1{ text-align: center;  font-size: 13.5vw; line-height: 25vh; opacity: 0.5;}
     p{font-size: 25px;}
-    .txtwrp{position: relative;z-index: 100; max-width: 1200px; margin: 0 auto; padding: 200px 0 50px;}
+    .txtwrp{position: relative;z-index: 100; max-width: 1200px; margin: 0 auto; padding: 50px;}
 }
     .banner:before{content:''; height:100%; width: 100%; background-color: rgba(0,0,0,.5); position: absolute; top: 0;left: 0;}
 

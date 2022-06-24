@@ -19,7 +19,7 @@ const Blog = (props) => {
             <div className={styled.banner}>
                 <div className={styled.txtwrp}>
                     <h1>Blog</h1>
-                    <p className={styled.subtitle}>"I am still learning." <span className={styled.author}>- Michelangelo</span></p>
+                    {/* <p className={styled.subtitle}>"I am still learning." <span className={styled.author}>- Michelangelo</span></p> */}
                 </div>
             </div>
             

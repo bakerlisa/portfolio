@@ -7,6 +7,7 @@ import AddBlog from '../../client/src/components/AddBlog';
 import EditBlog from '../../client/src/components/EditBlog';
 import Footer from '../../client/src/views/Footer';
 import Resume from '../../client/src/components/Resume';
+import Projects from './components/Projects';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
 
         <Switch>
           <Route exact path="/projects">
-
+            <Projects/>
           </Route>
         </Switch>
 
